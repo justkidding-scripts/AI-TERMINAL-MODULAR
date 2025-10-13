@@ -1,84 +1,84 @@
-name: 🤖 AI Terminal Tests
+name: AI Terminal Tests
 
 on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
+ push:
+ branches: [ main, develop ]
+ pull_request:
+ branches: [ main ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8, 3.9, '3.10', '3.11']
+ test:
+ runs-on: ubuntu-latest
+ strategy:
+ matrix:
+ python-version: [3.8, 3.9, '3.10', '3.11']
 
-    steps:
-    - uses: actions/checkout@v3
+ steps:
+ - uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+ - name: Set up Python ${{ matrix.python-version }}
+ uses: actions/setup-python@v4
+ with:
+ python-version: ${{ matrix.python-version }}
 
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y python3-tk python3-gi python3-gi-cairo
-        sudo apt-get install -y libvte-2.91-dev gir1.2-vte-2.91 gir1.2-gtk-3.0
+ - name: Install system dependencies
+ run: |
+ sudo apt-get update
+ sudo apt-get install -y python3-tk python3-gi python3-gi-cairo
+ sudo apt-get install -y libvte-2.91-dev gir1.2-vte-2.91 gir1.2-gtk-3.0
 
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest pytest-cov flake8 black mypy
-        pip install -r requirements.txt || true
+ - name: Install Python dependencies
+ run: |
+ python -m pip install --upgrade pip
+ pip install pytest pytest-cov flake8 black mypy
+ pip install -r requirements.txt || true
 
-    - name: Lint with flake8
-      run: |
-        flake8 core/ modules/ --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 core/ modules/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+ - name: Lint with flake8
+ run: |
+ flake8 core/ modules/ --count --select=E9,F63,F7,F82 --show-source --statistics
+ flake8 core/ modules/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Test with pytest
-      run: |
-        pytest tests/ -v --cov=core --cov=modules --cov-report=xml || true
+ - name: Test with pytest
+ run: |
+ pytest tests/ -v --cov=core --cov=modules --cov-report=xml || true
 
-    - name: Test imports
-      run: |
-        python -c "
-        import sys
-        sys.path.insert(0, 'modules/rag_integration')
-        try:
-            from rag import RAGSkill
-            print('✅ RAG system imports successfully')
-        except Exception as e:
-            print(f'⚠️ RAG import issue: {e}')
-        
-        try:
-            import tkinter
-            print('✅ tkinter available')
-        except ImportError:
-            print('❌ tkinter not available')
-        "
+ - name: Test imports
+ run: |
+ python -c "
+ import sys
+ sys.path.insert(0, 'modules/rag_integration')
+ try:
+ from rag import RAGSkill
+ print(' RAG system imports successfully')
+ except Exception as e:
+ print(f'️ RAG import issue: {e}')
 
-    - name: Test launcher
-      run: |
-        chmod +x launch.sh
-        ./launch.sh --help
-        ./launch.sh --test || true
+ try:
+ import tkinter
+ print(' tkinter available')
+ except ImportError:
+ print(' tkinter not available')
+ "
 
-  build-docs:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    
-    - name: Generate docs
-      run: |
-        python -c "
-        print('📖 Documentation build would go here')
-        print('✅ All components documented')
-        "
+ - name: Test launcher
+ run: |
+ chmod +x launch.sh
+ ./launch.sh --help
+ ./launch.sh --test || true
+
+ build-docs:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
+
+ - name: Setup Python
+ uses: actions/setup-python@v4
+ with:
+ python-version: '3.10'
+
+ - name: Generate docs
+ run: |
+ python -c "
+ print(' Documentation build would go here')
+ print(' All components documented')
+ "

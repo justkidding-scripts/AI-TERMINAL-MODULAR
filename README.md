@@ -1,23 +1,23 @@
-# 🤖 AI Enhanced Terminal - MODULAR
+# AI Enhanced Terminal - MODULAR
 
 A complete modular AI-enhanced terminal system with multiple interface options and full Ollama integration.
 
-## 🎯 Features
+## Features
 
-### 🖥️ Multiple Interface Options
+### ️ Multiple Interface Options
 - **Real Terminal GUI** - Full VTE-based terminal emulator with AI sidebar
-- **Basic GUI** - tkinter-based interface with unified chat/command experience  
+- **Basic GUI** - tkinter-based interface with unified chat/command experience
 - **Enhanced CLI** - Feature-rich command-line version with AI assistance
 - **Lightweight CLI** - Basic AI terminal for minimal setups
 
-### 🤖 AI Integration
+### AI Integration
 - **Ollama Integration** - Full support for local AI models
 - **RAG System** - Enhanced document indexing and retrieval
 - **Code Assistant** - Real-time code suggestions and debugging
 - **Error Analysis** - Automatic error explanation and solutions
 - **Smart Detection** - Distinguishes between commands and AI chat
 
-### 🔧 Advanced Features
+### Advanced Features
 - **Multi-shell Support** - Works with zsh, bash, fish
 - **Performance Monitoring** - Command execution tracking
 - **Session Management** - Save/load terminal sessions
@@ -25,12 +25,12 @@ A complete modular AI-enhanced terminal system with multiple interface options a
 - **Desktop Integration** - System menu entries
 - **Fallback Modes** - Graceful degradation when services unavailable
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/your-username/AI-TERMINAL-MODULAR.git
+git clone https/github.com/your-username/AI-TERMINAL-MODULAR.git
 cd AI-TERMINAL-MODULAR
 
 # Run setup
@@ -48,43 +48,43 @@ cd AI-TERMINAL-MODULAR
 # Basic GUI version
 ./launch.sh --gui
 
-# Enhanced CLI version  
+# Enhanced CLI version
 ./launch.sh --cli
 
 # Test connectivity
 ./launch.sh --test
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AI-TERMINAL-MODULAR/
-├── core/                    # Core terminal implementations
-│   ├── real_terminal_gui.py    # VTE-based real terminal
-│   ├── ai_terminal_gui.py      # Basic GUI terminal
-│   ├── ai_terminal_enhanced.py # Enhanced CLI terminal
-│   └── ai_terminal_basic.py    # Basic CLI terminal
-├── modules/                 # Modular components
-│   ├── rag_integration/        # RAG system integration
-│   ├── ai_assistant/          # AI assistance modules
-│   └── performance/           # Performance monitoring
-├── launchers/               # Launch scripts and utilities
-│   ├── launch.sh             # Universal launcher
-│   ├── setup.sh              # Setup script
-│   └── install_deps.sh       # Dependency installer
-├── config/                  # Configuration templates
-│   ├── terminal_config.json   # Terminal settings
-│   └── ai_config.json        # AI settings
-├── desktop/                 # Desktop integration
-│   ├── ai-terminal.desktop    # Desktop entry
-│   └── icons/                # Application icons
-└── docs/                   # Documentation
-    ├── INSTALL.md             # Installation guide
-    ├── USAGE.md               # Usage instructions
-    └── API.md                 # API documentation
+├── core/ # Core terminal implementations
+│ ├── real_terminal_gui.py # VTE-based real terminal
+│ ├── ai_terminal_gui.py # Basic GUI terminal
+│ ├── ai_terminal_enhanced.py # Enhanced CLI terminal
+│ └── ai_terminal_basic.py # Basic CLI terminal
+├── modules/ # Modular components
+│ ├── rag_integration/ # RAG system integration
+│ ├── ai_assistant/ # AI assistance modules
+│ └── performance/ # Performance monitoring
+├── launchers/ # Launch scripts and utilities
+│ ├── launch.sh # Universal launcher
+│ ├── setup.sh # Setup script
+│ └── install_deps.sh # Dependency installer
+├── config/ # Configuration templates
+│ ├── terminal_config.json # Terminal settings
+│ └── ai_config.json # AI settings
+├── desktop/ # Desktop integration
+│ ├── ai-terminal.desktop # Desktop entry
+│ └── icons/ # Application icons
+└── docs/ # Documentation
+ ├── INSTALL.md # Installation guide
+ ├── USAGE.md # Usage instructions
+ └── API.md # API documentation
 ```
 
-## 🔧 Requirements
+## Requirements
 
 ### System Requirements
 - **OS**: Linux (Debian/Ubuntu recommended)
@@ -100,7 +100,7 @@ AI-TERMINAL-MODULAR/
 - **Ollama**: For AI functionality
 - **Models**: codellama:7b, llama3.2 (auto-downloaded)
 
-## 📖 Usage
+## Usage
 
 ### Basic Commands
 ```bash
@@ -121,7 +121,7 @@ explain this error
 rag add ~/Documents
 rag add /path/to/project
 
-# Query knowledge base  
+# Query knowledge base
 rag ask "What is machine learning?"
 rag search "python functions"
 
@@ -133,50 +133,50 @@ rag clear
 
 ### Special Commands
 ```bash
-help          # Show help
-config        # Edit configuration  
-stats         # Performance statistics
-ai <command>  # Get AI suggestion
+help # Show help
+config # Edit configuration
+stats # Performance statistics
+ai <command> # Get AI suggestion
 explain <error> # Explain error message
 ```
 
-## ⚙️ Configuration
+## ️ Configuration
 
 ### Terminal Configuration (`~/.config/ai-terminal/config.json`)
 ```json
 {
-  "ai_enabled": true,
-  "model": "codellama:7b",
-  "theme": {
-    "prompt_color": "#00ff00",
-    "ai_color": "#4da6ff",
-    "error_color": "#ff4444"
-  },
-  "performance": {
-    "monitor_commands": true,
-    "show_execution_time": true
-  }
+ "ai_enabled": true,
+ "model": "codellama:7b",
+ "theme": {
+ "prompt_color": "#00ff00",
+ "ai_color": "#4da6ff",
+ "error_color": "#ff4444"
+ },
+ "performance": {
+ "monitor_commands": true,
+ "show_execution_time": true
+ }
 }
 ```
 
 ### GUI Configuration (`~/.config/ai-terminal/gui_config.json`)
 ```json
 {
-  "theme": {
-    "bg_color": "#1e1e1e",
-    "fg_color": "#ffffff",
-    "font_family": "JetBrains Mono",
-    "font_size": 12
-  },
-  "layout": {
-    "show_ai_panel": true,
-    "terminal_width": 70,
-    "ai_width": 30
-  }
+ "theme": {
+ "bg_color": "#1e1e1e",
+ "fg_color": "#ffffff",
+ "font_family": "JetBrains Mono",
+ "font_size": 12
+ },
+ "layout": {
+ "show_ai_panel": true,
+ "terminal_width": 70,
+ "ai_width": 30
+ }
 }
 ```
 
-## 🔌 API Integration
+## API Integration
 
 ### Ollama Integration
 ```python
@@ -196,7 +196,7 @@ rag.handle("rag add ~/documents")
 results = rag.handle("rag ask What is Python?")
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -228,7 +228,7 @@ export AI_TERMINAL_DEBUG=1
 ./launch.sh --cli --debug
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -236,23 +236,23 @@ export AI_TERMINAL_DEBUG=1
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Ollama** - Local AI model runtime
 - **VTE** - Terminal emulator library
 - **ChromaDB** - Vector database for RAG
 - **tkinter** - GUI framework
 
-## 📞 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/AI-TERMINAL-MODULAR/issues)
-- **Documentation**: [Wiki](https://github.com/your-username/AI-TERMINAL-MODULAR/wiki)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/AI-TERMINAL-MODULAR/discussions)
+- **Issues**: [GitHub Issues](https/github.com/your-username/AI-TERMINAL-MODULAR/issues)
+- **Documentation**: [Wiki](https/github.com/your-username/AI-TERMINAL-MODULAR/wiki)
+- **Discussions**: [GitHub Discussions](https/github.com/your-username/AI-TERMINAL-MODULAR/discussions)
 
 ---
 
-**Built with ❤️ for developers who love AI-enhanced workflows**
+**Built with ️ for developers who love AI-enhanced workflows**

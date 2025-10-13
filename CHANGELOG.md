@@ -2,23 +2,23 @@
 
 All notable changes to AI-TERMINAL-MODULAR will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https/keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https/semver.org/spec/v2.0.0.html).
 
 ## [1.0.0] - 2025-10-13
 
-### 🎉 Initial Release
+### Initial Release
 
 The first stable release of AI-TERMINAL-MODULAR - a complete modular AI-enhanced terminal system.
 
-### ✨ Added
+### Added
 
 #### Core Features
 - **Multiple Terminal Interfaces**
-  - Real Terminal GUI (VTE-based) with AI sidebar
-  - Basic GUI (tkinter) with unified chat/command interface
-  - Enhanced CLI with performance monitoring and AI assistance
-  - Basic CLI for minimal setups
+ - Real Terminal GUI (VTE-based) with AI sidebar
+ - Basic GUI (tkinter) with unified chat/command interface
+ - Enhanced CLI with performance monitoring and AI assistance
+ - Basic CLI for minimal setups
 
 #### AI Integration
 - **Full Ollama Integration** with local model support
@@ -41,11 +41,11 @@ The first stable release of AI-TERMINAL-MODULAR - a complete modular AI-enhanced
 - **Setup Automation** - complete environment configuration
 - **Cross-shell Support** - works with zsh, bash, fish
 
-### 🔧 Technical Features
+### Technical Features
 
 #### Architecture
 - **Modular Design** - clean separation of concerns
-- **Plugin System** - extensible RAG and AI modules  
+- **Plugin System** - extensible RAG and AI modules
 - **Error Handling** - comprehensive error recovery
 - **Performance Monitoring** - command execution tracking
 - **Threading** - non-blocking AI responses
@@ -57,11 +57,11 @@ The first stable release of AI-TERMINAL-MODULAR - a complete modular AI-enhanced
 - **Security Policy** - vulnerability reporting and best practices
 - **Contributing Guidelines** - developer onboarding documentation
 
-### 📦 Installation & Usage
+### Installation & Usage
 
 #### Quick Start
 ```bash
-git clone https://github.com/justkidding-scripts/AI-TERMINAL-MODULAR.git
+git clone https/github.com/justkidding-scripts/AI-TERMINAL-MODULAR.git
 cd AI-TERMINAL-MODULAR
 ./setup.sh
 ./launch.sh
@@ -77,7 +77,7 @@ cd AI-TERMINAL-MODULAR
 - **Ollama**: For AI functionality (optional)
 - **Models**: codellama:7b, llama3.2 (auto-downloaded)
 
-### 🎯 Interface Options
+### Interface Options
 
 | Interface | Description | Best For |
 |-----------|-------------|----------|
@@ -86,7 +86,7 @@ cd AI-TERMINAL-MODULAR
 | `--enhanced` | Feature-rich CLI with AI | Power users |
 | `--cli` | Basic lightweight terminal | Minimal setups |
 
-### 🤖 RAG Commands
+### RAG Commands
 
 | Command | Description | Example |
 |---------|-------------|---------|
@@ -96,14 +96,14 @@ cd AI-TERMINAL-MODULAR
 | `rag status` | Show system status | `rag status` |
 | `rag list` | List indexed documents | `rag list` |
 
-### 📈 Performance
+### Performance
 
 - **Startup Time**: < 2 seconds (GUI), < 0.5 seconds (CLI)
 - **Memory Usage**: ~50MB (GUI), ~20MB (CLI)
 - **AI Response Time**: 1-3 seconds (depends on Ollama model)
 - **Document Indexing**: ~1000 docs/second
 
-### 🔐 Security
+### Security
 
 - **Local Processing**: All AI operations happen locally
 - **No Data Collection**: No telemetry or user tracking
@@ -111,7 +111,7 @@ cd AI-TERMINAL-MODULAR
 - **Input Sanitization**: All inputs validated and escaped
 - **Secure Defaults**: Conservative security settings
 
-### 🏆 Recognition
+### Recognition
 
 Special thanks to:
 - **Ollama Team** - For the excellent local AI runtime
@@ -119,7 +119,7 @@ Special thanks to:
 - **ChromaDB Team** - For the vector database
 - **Open Source Community** - For inspiration and support
 
-### 📊 Project Statistics
+### Project Statistics
 
 - **Languages**: Python (95%), Shell (5%)
 - **Files**: 25+ source files
