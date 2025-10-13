@@ -1,39 +1,39 @@
-# 🤝 Contributing to AI-TERMINAL-MODULAR
+# Contributing to AI-TERMINAL-MODULAR
 
 Thank you for your interest in contributing! This guide will help you get started.
 
-## 🎯 Ways to Contribute
+## Ways to Contribute
 
-### 🐛 Bug Reports
+### Bug Reports
 - **Search** existing issues first
 - **Provide** detailed reproduction steps
 - **Include** system information and logs
 - **Add** labels: `bug`, `needs-triage`
 
-### ✨ Feature Requests
+### Feature Requests
 - **Check** existing feature requests
 - **Describe** the use case clearly
 - **Provide** mockups or examples if applicable
 - **Add** labels: `enhancement`, `feature-request`
 
-### 🔧 Code Contributions
+### Code Contributions
 - **Fork** the repository
 - **Create** a feature branch
 - **Follow** coding standards
 - **Add** tests for new functionality
 - **Update** documentation
 
-### 📖 Documentation
+### Documentation
 - **Improve** existing docs
 - **Add** missing documentation
 - **Fix** typos and grammar
 - **Update** examples
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Fork and Clone
 ```bash
-git clone https://github.com/YOUR-USERNAME/AI-TERMINAL-MODULAR.git
+git clone https/github.com/YOUR-USERNAME/AI-TERMINAL-MODULAR.git
 cd AI-TERMINAL-MODULAR
 ```
 
@@ -56,7 +56,7 @@ git checkout -b feature/amazing-feature
 git checkout -b bugfix/fix-important-bug
 ```
 
-## 📝 Coding Standards
+## Coding Standards
 
 ### Python Style
 - **Follow** PEP 8
@@ -84,13 +84,13 @@ pytest tests/
 Use conventional commits format:
 ```
 feat: add new terminal interface
-fix: resolve RAG indexing bug  
+fix: resolve RAG indexing bug
 docs: update installation guide
 test: add RAG system tests
 refactor: improve error handling
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Running Tests
 ```bash
@@ -114,24 +114,24 @@ pytest --cov=core --cov=modules
 Example:
 ```python
 def test_rag_add_document_success(self):
-    """Test successful document addition to RAG system"""
-    rag = RAGSkill()
-    result = rag.handle("rag add_text test :: content")
-    assert "Added" in result
-    assert "test" in result
+ """Test successful document addition to RAG system"""
+ rag = RAGSkill()
+ result = rag.handle("rag add_text test :: content")
+ assert "Added" in result
+ assert "test" in result
 ```
 
-## 🏗️ Architecture
+## ️ Architecture
 
 ### Project Structure
 ```
 AI-TERMINAL-MODULAR/
-├── core/           # Terminal implementations
-├── modules/        # Modular components  
-├── tests/          # Test suite
-├── config/         # Configuration templates
-├── launchers/      # Launch scripts
-└── docs/           # Documentation
+├── core/ # Terminal implementations
+├── modules/ # Modular components
+├── tests/ # Test suite
+├── config/ # Configuration templates
+├── launchers/ # Launch scripts
+└── docs/ # Documentation
 ```
 
 ### Key Components
@@ -148,7 +148,7 @@ AI-TERMINAL-MODULAR/
 5. **Update** documentation
 6. **Add** launcher support
 
-## 📋 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting
 - [ ] Code follows style guidelines
@@ -159,25 +159,25 @@ AI-TERMINAL-MODULAR/
 
 ### PR Description Template
 ```markdown
-## 🎯 Description
+## Description
 Brief description of changes
 
-## 🔧 Type of Change
+## Type of Change
 - [ ] Bug fix
-- [ ] New feature  
+- [ ] New feature
 - [ ] Breaking change
 - [ ] Documentation update
 
-## 🧪 Testing
+## Testing
 - [ ] Unit tests added/updated
 - [ ] Manual testing completed
 - [ ] All tests pass
 
-## 📖 Documentation
+## Documentation
 - [ ] Documentation updated
 - [ ] Examples added/updated
 
-## ✅ Checklist
+## Checklist
 - [ ] Code follows style guidelines
 - [ ] Self-review completed
 - [ ] Comments added for complex logic
@@ -190,14 +190,14 @@ Brief description of changes
 4. **Final approval**
 5. **Merge** to main
 
-## 🌟 Recognition
+## Recognition
 
 Contributors are recognized in:
 - **README** contributors section
-- **Release notes** 
+- **Release notes**
 - **GitHub** contributors page
 
-## 📞 Getting Help
+## Getting Help
 
 ### Discussion Forums
 - **GitHub Discussions**: General questions
@@ -208,7 +208,7 @@ Contributors are recognized in:
 - **Issues**: Primary communication method
 - **Email**: For security issues only
 
-## 🎉 First Contribution
+## First Contribution
 
 ### Good First Issues
 Look for issues labeled:
@@ -222,7 +222,7 @@ Look for issues labeled:
 - **Request guidance** from maintainers
 - **Start small** with documentation or tests
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 ### Our Pledge
 We are committed to providing a welcoming and inclusive environment for all contributors.
@@ -238,8 +238,8 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 ---
 
-## 🙏 Thank You!
+## Thank You!
 
 Every contribution, no matter how small, is valuable to the project. Thank you for helping make AI-TERMINAL-MODULAR better for everyone!
 
-**Happy Coding!** 🚀
+**Happy Coding!** 
