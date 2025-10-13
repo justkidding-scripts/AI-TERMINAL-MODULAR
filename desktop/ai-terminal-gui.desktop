@@ -1,0 +1,28 @@
+[Desktop Entry]
+Version=1.0
+Name=AI Enhanced Terminal
+Comment=Modern terminal interface with integrated Ollama AI assistance
+Keywords=terminal;shell;command;ai;ollama;assistant;
+Exec=/home/nike/ai-enhanced-terminal/launch_gui.sh --gui
+Icon=utilities-terminal
+Type=Application
+Categories=System;TerminalEmulator;Utility;Development;
+StartupNotify=true
+StartupWMClass=ai-terminal-gui
+MimeType=application/x-shellscript;text/plain;
+Actions=CLI;Setup;Test;
+
+[Desktop Action CLI]
+Name=Launch CLI Version
+Exec=/home/nike/ai-enhanced-terminal/launch_gui.sh --cli
+Icon=utilities-terminal
+
+[Desktop Action Setup]
+Name=Setup Environment
+Exec=/home/nike/ai-enhanced-terminal/launch_gui.sh --setup
+Icon=system-software-install
+
+[Desktop Action Test]
+Name=Test AI Connection
+Exec=/home/nike/ai-enhanced-terminal/launch_gui.sh --test
+Icon=network-wired

@@ -1,0 +1,39 @@
+{
+  "theme": {
+    "bg_color": "#1e1e1e",
+    "fg_color": "#ffffff",
+    "prompt_color": "#00ff00",
+    "ai_color": "#4da6ff",
+    "error_color": "#ff4444",
+    "user_color": "#90EE90",
+    "font_family": "JetBrains Mono",
+    "font_size": 12
+  },
+  "layout": {
+    "window_width": 1400,
+    "window_height": 900,
+    "terminal_width": 70,
+    "ai_width": 30,
+    "show_ai_panel": true,
+    "auto_suggest": true,
+    "terminal_height": 25
+  },
+  "ai": {
+    "enabled": true,
+    "model": "codellama:7b",
+    "auto_explain_errors": true,
+    "suggestion_delay": 1.0,
+    "max_response_length": 1000
+  },
+  "performance": {
+    "enable_caching": true,
+    "cache_size": 100,
+    "background_processing": true
+  },
+  "interface": {
+    "show_welcome": true,
+    "show_timestamps": true,
+    "auto_scroll": true,
+    "command_history_size": 1000
+  }
+}

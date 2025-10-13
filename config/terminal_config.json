@@ -1,0 +1,31 @@
+{
+  "ai_enabled": true,
+  "model": "codellama:7b",
+  "fallback_model": "llama3.2",
+  "suggest_on_tab": true,
+  "explain_errors": true,
+  "performance": {
+    "monitor_commands": true,
+    "show_execution_time": true,
+    "slow_command_threshold": 2.0
+  },
+  "theme": {
+    "prompt_color": "\u001b[1;32m",
+    "ai_color": "\u001b[1;34m", 
+    "error_color": "\u001b[1;31m",
+    "info_color": "\u001b[1;36m",
+    "warning_color": "\u001b[1;33m"
+  },
+  "rag": {
+    "enabled": true,
+    "auto_index": false,
+    "max_results": 3,
+    "cache_timeout": 300
+  },
+  "shell": {
+    "preferred": "zsh",
+    "load_aliases": true,
+    "load_functions": true,
+    "history_size": 10000
+  }
+}

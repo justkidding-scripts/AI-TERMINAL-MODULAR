@@ -1,0 +1,32 @@
+# AI Terminal Modular - Python Dependencies
+
+# Core dependencies
+numpy>=1.21.0
+requests>=2.25.0
+
+# AI and RAG dependencies
+ollama>=0.1.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+transformers>=4.20.0
+
+# Optional ML dependencies
+torch>=1.12.0
+faiss-cpu>=1.7.0
+
+# GUI dependencies (auto-installed via system packages)
+# python3-tk
+# python3-gi
+# python3-gi-cairo
+
+# Development dependencies
+pytest>=7.0.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.991
+
+# Utility dependencies
+python-dotenv>=0.19.0
+pyyaml>=6.0
+colorama>=0.4.4
+rich>=12.0.0
