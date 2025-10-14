@@ -239,7 +239,7 @@ class RealTerminalWindow(Gtk.Window):
             welcome += "💡 Try: 'ai help' for AI commands\n\n"
             
             # Wait a moment then send welcome
-            GLib.timeout_add(500, lambda: self.terminal.feed_child(welcome.encode(), len(welcome.encode())))
+            GLib.timeout_add(500, lambda: self.terminal.feed_child(welcome.encode()))
             
         except Exception as e:
             print(f"Error spawning shell: {e}")

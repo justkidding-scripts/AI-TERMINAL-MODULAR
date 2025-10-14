@@ -29,7 +29,8 @@ print_usage() {
     echo -e "${YELLOW}Usage: $0 [OPTIONS]${NC}"
     echo ""
     echo "Interface Options:"
-    echo "  -r, --real        Launch real terminal GUI (VTE-based) [RECOMMENDED]"
+    echo "  -w, --warp        Launch Warp-style unified AI terminal [NEW & RECOMMENDED]"
+    echo "  -r, --real        Launch real terminal GUI (VTE-based)"
     echo "  -g, --gui         Launch basic GUI version (tkinter)"
     echo "  -e, --enhanced    Launch enhanced CLI version"
     echo "  -c, --cli         Launch basic CLI version"
@@ -43,7 +44,8 @@ print_usage() {
     echo ""
     echo "Examples:"
     echo "  $0                # Auto-detect best interface"
-    echo "  $0 --real         # Launch real terminal (best experience)"
+    echo "  $0 --warp         # Launch Warp-style terminal (BEST experience)"
+    echo "  $0 --real         # Launch real terminal (good experience)"
     echo "  $0 --setup        # Setup everything"
     echo "  $0 --test         # Test all components"
 }
@@ -156,7 +158,7 @@ test_components() {
     done
     
     # Test GUI terminals  
-    for gui in "core/ai_terminal_gui.py" "core/real_terminal_gui.py"; do
+    for gui in "core/warp_terminal_gui.py" "core/ai_terminal_gui.py" "core/real_terminal_gui.py"; do
         if [ -f "$gui" ]; then
             echo -e "${GREEN}✅ Found: $(basename "$gui")${NC}"
         else
@@ -172,13 +174,33 @@ test_components() {
     fi
     
     echo -e "\n${CYAN}Recommendation:${NC}"
-    if check_vte && check_display; then
-        echo -e "${GREEN}🎯 Use: $0 --real (best experience)${NC}"
+    if check_vte && check_display && [ -f "core/warp_terminal_gui.py" ]; then
+        echo -e "${GREEN}🎯 Use: $0 --warp (BEST - unified AI+terminal)${NC}"
+    elif check_vte && check_display; then
+        echo -e "${GREEN}🎯 Use: $0 --real (good experience)${NC}"
     elif check_tkinter && check_display; then
-        echo -e "${YELLOW}🎯 Use: $0 --gui (good experience)${NC}"
+        echo -e "${YELLOW}🎯 Use: $0 --gui (basic GUI)${NC}"
     else
         echo -e "${BLUE}🎯 Use: $0 --enhanced (CLI experience)${NC}"
     fi
+}
+
+launch_warp_terminal() {
+    echo -e "${BLUE}🚀 Launching Warp-Style AI Terminal...${NC}"
+    
+    if [ ! -f "core/warp_terminal_gui.py" ]; then
+        echo -e "${RED}❌ Warp terminal not found${NC}"
+        fallback_launch
+        return
+    fi
+    
+    if ! check_display || ! check_vte; then
+        echo -e "${YELLOW}⚠️ Requirements not met for Warp terminal${NC}"
+        fallback_launch
+        return
+    fi
+    
+    python3 core/warp_terminal_gui.py "$@"
 }
 
 launch_real_terminal() {
@@ -242,8 +264,11 @@ launch_basic_cli() {
 auto_detect_launch() {
     echo -e "${BLUE}🔍 Auto-detecting best interface...${NC}"
     
-    if check_display && check_vte && [ -f "core/real_terminal_gui.py" ]; then
-        echo -e "${GREEN}🎯 Launching Real Terminal (best experience)${NC}"
+    if check_display && check_vte && [ -f "core/warp_terminal_gui.py" ]; then
+        echo -e "${GREEN}🎯 Launching Warp Terminal (BEST - unified AI+terminal)${NC}"
+        launch_warp_terminal "$@"
+    elif check_display && check_vte && [ -f "core/real_terminal_gui.py" ]; then
+        echo -e "${GREEN}🎯 Launching Real Terminal (good experience)${NC}"
         launch_real_terminal "$@"
     elif check_display && check_tkinter && [ -f "core/ai_terminal_gui.py" ]; then
         echo -e "${YELLOW}🎯 Launching GUI Terminal${NC}"
@@ -260,7 +285,9 @@ auto_detect_launch() {
 fallback_launch() {
     echo -e "${CYAN}🔄 Trying fallback options...${NC}"
     
-    if check_display && check_tkinter && [ -f "core/ai_terminal_gui.py" ]; then
+    if check_display && check_vte && [ -f "core/warp_terminal_gui.py" ]; then
+        launch_warp_terminal "$@"
+    elif check_display && check_tkinter && [ -f "core/ai_terminal_gui.py" ]; then
         launch_gui_terminal "$@"
     elif [ -f "core/ai_terminal_enhanced.py" ]; then
         launch_enhanced_cli "$@"
@@ -290,6 +317,10 @@ main() {
         -t|--test)
             test_components
             exit 0
+            ;;
+        -w|--warp)
+            shift
+            launch_warp_terminal "$@"
             ;;
         -r|--real)
             shift
